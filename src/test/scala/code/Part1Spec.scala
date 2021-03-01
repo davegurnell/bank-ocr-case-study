@@ -12,112 +12,112 @@ class Part1Spec extends WordSpec with Matchers with Part1TestCases {
 
 trait Part1TestCases {
   val testCase1a: TestCase =
-    TestCase(
+    TestCase.create(
       """
       # _  _  _  _  _  _  _  _  _
       #| || || || || || || || || |
       #|_||_||_||_||_||_||_||_||_|
-      """.trim.stripMargin('#'),
+      """,
       "000000000"
     )
 
   val testCase1b: TestCase =
-    TestCase(
+    TestCase.create(
       """
       #
       #  |  |  |  |  |  |  |  |  |
       #  |  |  |  |  |  |  |  |  |
-      """.trim.stripMargin('#'),
+      """,
       "111111111"
     )
 
   val testCase1c: TestCase =
-    TestCase(
+    TestCase.create(
       """
       # _  _  _  _  _  _  _  _  _
       # _| _| _| _| _| _| _| _| _|
       #|_ |_ |_ |_ |_ |_ |_ |_ |_
-      """.trim.stripMargin('#'),
+      """,
       "222222222"
     )
 
   val testCase1d: TestCase =
-    TestCase(
+    TestCase.create(
       """
       # _  _  _  _  _  _  _  _  _
       # _| _| _| _| _| _| _| _| _|
       # _| _| _| _| _| _| _| _| _|
-      """.trim.stripMargin('#'),
+      """,
       "333333333"
     )
 
   val testCase1e: TestCase =
-    TestCase(
+    TestCase.create(
       """
       #
       #|_||_||_||_||_||_||_||_||_|
       #  |  |  |  |  |  |  |  |  |
-      """.trim.stripMargin('#'),
+      """,
       "444444444"
     )
 
   val testCase1f: TestCase =
-    TestCase(
+    TestCase.create(
       """
       # _  _  _  _  _  _  _  _  _
       #|_ |_ |_ |_ |_ |_ |_ |_ |_
       # _| _| _| _| _| _| _| _| _|
-      """.trim.stripMargin('#'),
+      """,
       "555555555"
     )
 
   val testCase1g: TestCase =
-    TestCase(
+    TestCase.create(
       """
       # _  _  _  _  _  _  _  _  _
       #|_ |_ |_ |_ |_ |_ |_ |_ |_
       #|_||_||_||_||_||_||_||_||_|
-      """.trim.stripMargin('#'),
+      """,
       "666666666"
     )
 
   val testCase1h: TestCase =
-    TestCase(
+    TestCase.create(
       """
       # _  _  _  _  _  _  _  _  _
       #  |  |  |  |  |  |  |  |  |
       #  |  |  |  |  |  |  |  |  |
-      """.trim.stripMargin('#'),
+      """,
       "777777777"
     )
 
   val testCase1i: TestCase =
-    TestCase(
+    TestCase.create(
       """
       # _  _  _  _  _  _  _  _  _
       #|_||_||_||_||_||_||_||_||_|
       #|_||_||_||_||_||_||_||_||_|
-      """.trim.stripMargin('#'),
+      """,
       "888888888"
     )
 
   val testCase1j: TestCase =
-    TestCase(
+    TestCase.create(
       """
       # _  _  _  _  _  _  _  _  _
       #|_||_||_||_||_||_||_||_||_|
       # _| _| _| _| _| _| _| _| _|
-      """.trim.stripMargin('#'),
+      """,
       "999999999"
     )
 
   val testCase1k: TestCase =
-    TestCase(
+    TestCase.create(
       """
       #    _  _     _  _  _  _  _
       #  | _| _||_||_ |_   ||_||_|
       #  ||_  _|  | _||_|  ||_| _|
-      """.trim.stripMargin('#'),
+      """,
       "123456789"
     )
 }
