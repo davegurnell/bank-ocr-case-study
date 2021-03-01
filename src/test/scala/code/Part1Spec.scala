@@ -17,7 +17,7 @@ trait Part1TestCases {
       # _  _  _  _  _  _  _  _  _
       #| || || || || || || || || |
       #|_||_||_||_||_||_||_||_||_|
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "000000000"
     )
 
@@ -27,7 +27,7 @@ trait Part1TestCases {
       #
       #  |  |  |  |  |  |  |  |  |
       #  |  |  |  |  |  |  |  |  |
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "111111111"
     )
 
@@ -37,7 +37,7 @@ trait Part1TestCases {
       # _  _  _  _  _  _  _  _  _
       # _| _| _| _| _| _| _| _| _|
       #|_ |_ |_ |_ |_ |_ |_ |_ |_
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "222222222"
     )
 
@@ -47,7 +47,7 @@ trait Part1TestCases {
       # _  _  _  _  _  _  _  _  _
       # _| _| _| _| _| _| _| _| _|
       # _| _| _| _| _| _| _| _| _|
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "333333333"
     )
 
@@ -57,7 +57,7 @@ trait Part1TestCases {
       #
       #|_||_||_||_||_||_||_||_||_|
       #  |  |  |  |  |  |  |  |  |
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "444444444"
     )
 
@@ -67,7 +67,7 @@ trait Part1TestCases {
       # _  _  _  _  _  _  _  _  _
       #|_ |_ |_ |_ |_ |_ |_ |_ |_
       # _| _| _| _| _| _| _| _| _|
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "555555555"
     )
 
@@ -77,7 +77,7 @@ trait Part1TestCases {
       # _  _  _  _  _  _  _  _  _
       #|_ |_ |_ |_ |_ |_ |_ |_ |_
       #|_||_||_||_||_||_||_||_||_|
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "666666666"
     )
 
@@ -87,7 +87,7 @@ trait Part1TestCases {
       # _  _  _  _  _  _  _  _  _
       #  |  |  |  |  |  |  |  |  |
       #  |  |  |  |  |  |  |  |  |
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "777777777"
     )
 
@@ -97,7 +97,7 @@ trait Part1TestCases {
       # _  _  _  _  _  _  _  _  _
       #|_||_||_||_||_||_||_||_||_|
       #|_||_||_||_||_||_||_||_||_|
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "888888888"
     )
 
@@ -107,7 +107,7 @@ trait Part1TestCases {
       # _  _  _  _  _  _  _  _  _
       #|_||_||_||_||_||_||_||_||_|
       # _| _| _| _| _| _| _| _| _|
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "999999999"
     )
 
@@ -117,7 +117,7 @@ trait Part1TestCases {
       #    _  _     _  _  _  _  _
       #  | _| _||_||_ |_   ||_||_|
       #  ||_  _|  | _||_|  ||_| _|
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "123456789"
     )
 }

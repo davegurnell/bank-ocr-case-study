@@ -17,7 +17,7 @@ trait Part3TestCases {
       # _  _  _  _  _  _  _  _
       #| || || || || || || ||_   |
       #|_||_||_||_||_||_||_| _|  |
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "000000051"
     )
 
@@ -27,7 +27,7 @@ trait Part3TestCases {
       #    _  _  _  _  _  _     _
       #|_||_|| || ||_   |  |  | _
       #  | _||_||_||_|  |  |  | _|
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "49006771? ILL"
     )
 
@@ -37,7 +37,7 @@ trait Part3TestCases {
       #    _  _     _  _  _  _  _
       #  | _| _||_| _ |_   ||_||_|
       #  ||_  _|  | _||_|  ||_| _
-      """.stripMargin("#"),
+      """.trim.stripMargin('#'),
       "1234?678? ILL"
     )
 }
