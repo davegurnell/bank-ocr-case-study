@@ -1,7 +1,7 @@
 package code
 
 object Digits {
-  def formatDigit(num: Int)(string: String): String =
+  def format(num: Int)(string: String): String =
     string.trim
       .stripMargin('#')
       .split("\n")
@@ -9,7 +9,7 @@ object Digits {
       .mkString("\n")
 
   val Digit1: String =
-    formatDigit(1) {
+    format(1) {
       """
       #
       #  |
@@ -18,7 +18,7 @@ object Digits {
     }
 
   val Digit2: String =
-    formatDigit(1) {
+    format(1) {
       """
       # _
       # _|
@@ -27,7 +27,7 @@ object Digits {
     }
 
   val Digit3: String =
-    formatDigit(1) {
+    format(1) {
       """
       # _
       # _|
@@ -36,7 +36,7 @@ object Digits {
     }
 
   val Digit4: String =
-    formatDigit(1) {
+    format(1) {
       """
       #
       #|_|
@@ -45,7 +45,7 @@ object Digits {
     }
 
   val Digit5: String =
-    formatDigit(1) {
+    format(1) {
       """
       # _
       #|_
@@ -54,7 +54,7 @@ object Digits {
     }
 
   val Digit6: String =
-    formatDigit(1) {
+    format(1) {
       """
       # _
       #|_
@@ -63,7 +63,7 @@ object Digits {
     }
 
   val Digit7: String =
-    formatDigit(1) {
+    format(1) {
       """
       # _
       #  |
@@ -72,7 +72,7 @@ object Digits {
     }
 
   val Digit8: String =
-    formatDigit(1) {
+    format(1) {
       """
       # _
       #|_|
@@ -81,7 +81,7 @@ object Digits {
     }
 
   val Digit9: String =
-    formatDigit(1) {
+    format(1) {
       """
       # _
       #|_|
@@ -90,7 +90,7 @@ object Digits {
     }
 
   val Digit0: String =
-    formatDigit(1) {
+    format(1) {
       """
       # _
       #| |

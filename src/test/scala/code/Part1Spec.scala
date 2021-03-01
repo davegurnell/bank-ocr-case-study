@@ -4,7 +4,7 @@ import org.scalatest._
 import org.scalatest.prop._
 
 class Part1Spec extends WordSpec with Matchers with Part1TestCases with TableDrivenPropertyChecks {
-  "parseInput" should {
+  "Parser.parse" should {
     "handle the built-in test cases" in {
       val testCases =
         Table(
@@ -23,7 +23,7 @@ class Part1Spec extends WordSpec with Matchers with Part1TestCases with TableDri
         )
 
       forAll(testCases) { (actual, expected) =>
-        BankOCR.parseInput(actual) shouldBe Right(expected)
+        Parser.parse(actual) shouldBe Right(expected)
       }
     }
   }
