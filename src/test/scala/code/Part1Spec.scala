@@ -1,11 +1,30 @@
 package code
 
 import org.scalatest._
+import org.scalatest.prop._
 
-class Part1Spec extends WordSpec with Matchers with Part1TestCases {
-  "part 1" should {
-    "have tests" in {
-      pending
+class Part1Spec extends WordSpec with Matchers with Part1TestCases with TableDrivenPropertyChecks {
+  "parseInput" should {
+    "handle the built-in test cases" in {
+      val testCases =
+        Table(
+          ("actual", "expected"),
+          testCase1a.tuple,
+          testCase1b.tuple,
+          testCase1c.tuple,
+          testCase1d.tuple,
+          testCase1e.tuple,
+          testCase1f.tuple,
+          testCase1g.tuple,
+          testCase1h.tuple,
+          testCase1i.tuple,
+          testCase1j.tuple,
+          testCase1k.tuple
+        )
+
+      forAll(testCases) { (actual, expected) =>
+        BankOCR.parseInput(actual) shouldBe Right(expected)
+      }
     }
   }
 }

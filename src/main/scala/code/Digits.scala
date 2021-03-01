@@ -1,8 +1,12 @@
 package code
 
 object Digits {
-  def formatDigit(n: Int)(s: String): String =
-    s.trim.stripMargin('#').split("\n").map(_.padTo(3 * n, ' ')).mkString
+  def formatDigit(num: Int)(string: String): String =
+    string.trim
+      .stripMargin('#')
+      .split("\n")
+      .map(_.padTo(3 * num, ' '))
+      .mkString("\n")
 
   val Digit1: String =
     formatDigit(1) {

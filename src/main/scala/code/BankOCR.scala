@@ -2,7 +2,7 @@ package code
 
 import cats.implicits._
 
-object Main {
+object BankOCR {
   type Result[A] = Either[String, A]
 
   def parseDigit(digit: String, index: Int): Result[String] =
@@ -26,39 +26,37 @@ object Main {
         case List(a, b, c) =>
           Right(List(a, b, c))
 
-        case _ =>
-          Left("Wrong number of lines in input")
+        case lines =>
+          Left(s"Wrong number of lines in input: ${lines.length}")
       }
 
-    def lineToTriplets(line: String): Result[List[String]] = {
+    def lineToTriplets(line: String, index: Int): Result[List[String]] = {
       val triplets: List[String] =
         line.padTo(3 * 9, ' ').grouped(3).toList
 
       if (triplets.length == 9) {
         Right(triplets)
       } else {
-        Left(s"Wrong number of characters in line")
+        Left(s"Wrong number of characters in line $index")
       }
     }
 
-    def transposeTriplets(triplets: List[List[String]]): Result[List[String]] =
+    def tripletsToDigits(triplets: List[List[String]]): Result[List[String]] =
       triplets match {
         case List(a, b, c) =>
-          Right((a, b, c).zipped.map { case (a, b, c) => s"$a$b$c" }.toList)
+          Right((a, b, c).zipped.map { case (a, b, c) => s"$a\n$b\n$c" }.toList)
 
         case _ =>
-          Left("Wrong number of lines in transposeTriplets")
+          Left("Wrong number of lines in tripletsToDigits")
       }
 
     for {
       lines <- inputToLines
-      _ = println("lines = " + lines)
-      triplets <- lines.traverse(lineToTriplets)
-      _ = println("triplets = " + triplets)
-      digits <- transposeTriplets(triplets)
-      _ = println("digits = " + digits)
-      digits <- digits.zipWithIndex.traverse { case (digit, index) => parseDigit(digit, index) }
-      _ = println("digits = " + digits)
+      triplets <- lines.zipWithIndex
+        .traverse { case (line, index) => lineToTriplets(line, index) }
+      digits <- tripletsToDigits(triplets)
+      digits <- digits.zipWithIndex
+        .traverse { case (digit, index) => parseDigit(digit, index) }
     } yield digits.mkString
   }
 
