@@ -11,7 +11,7 @@ object TestCase {
       .stripMargin('#')
       .split("\n")
       .map(_.padTo(3 * num, ' '))
-      .mkString
+      .mkString("\n")
 
   def create(actual: String, expected: String): TestCase =
     TestCase(formatDigits(9)(actual), expected)
